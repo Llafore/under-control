@@ -1,0 +1,46 @@
+{
+  "theme": "dark",
+  "colors": {
+    "background": {
+      "primary": "#0D1117",
+      "secondary": "#161B22",
+      "tertiary": "#21262D"
+    },
+    "text": {
+      "primary": "#E6EDF3",
+      "secondary": "#8B949E",
+      "disabled": "#6E7681",
+      "inverse": "#0D1117"
+    },
+    "border": {
+      "default": "#30363D",
+      "subtle": "#21262D"
+    },
+    "primary": {
+      "main": "#2ECC71",
+      "hover": "#27AE60",
+      "active": "#1F8F4E",
+      "light": "#7EE2A8",
+      "contrastText": "#0D1117"
+    },
+    "secondary": {
+      "main": "#58A6FF",
+      "hover": "#1F6FEB",
+      "light": "#79C0FF",
+      "contrastText": "#0D1117"
+    },
+    "status": {
+      "success": "#2ECC71",
+      "error": "#F85149",
+      "warning": "#D29922",
+      "info": "#58A6FF"
+    },
+    "heatmap": {
+      "level0": "#161B22",
+      "level1": "#0E4429",
+      "level2": "#006D32",
+      "level3": "#26A641",
+      "level4": "#39D353"
+    }
+  }
+}
