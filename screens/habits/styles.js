@@ -1,0 +1,183 @@
+import { StyleSheet } from "react-native";
+
+export const HabitsStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#0D1117",
+    },
+    content: {
+        width: "100%",
+        paddingHorizontal: 20,
+        paddingBottom: 28,
+    },
+    topBar: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingTop: 8,
+        marginBottom: 18,
+    },
+    backButton: {
+        width: 40,
+        height: 40,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#161B22",
+        borderWidth: 1,
+        borderColor: "#30363D",
+    },
+    backButtonText: {
+        color: "#FC6C85",
+        fontSize: 22,
+        fontWeight: "800",
+        lineHeight: 24,
+    },
+    title: {
+        color: "#E6EDF3",
+        fontSize: 22,
+        fontWeight: "800",
+    },
+    topBarSpacer: {
+        width: 40,
+        height: 40,
+    },
+    form: {
+        backgroundColor: "#161B22",
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: "#30363D",
+        padding: 14,
+        marginBottom: 18,
+    },
+    formTitle: {
+        color: "#E6EDF3",
+        fontSize: 18,
+        fontWeight: "800",
+        marginBottom: 12,
+    },
+    input: {
+        minHeight: 44,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: "#30363D",
+        backgroundColor: "#0D1117",
+        color: "#E6EDF3",
+        fontSize: 15,
+        paddingHorizontal: 12,
+        marginBottom: 10,
+    },
+    textArea: {
+        minHeight: 88,
+        paddingTop: 12,
+        textAlignVertical: "top",
+    },
+    formActions: {
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        gap: 10,
+    },
+    primaryButton: {
+        minWidth: 96,
+        height: 40,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#FC6C85",
+    },
+    primaryButtonText: {
+        color: "#0D1117",
+        fontSize: 14,
+        fontWeight: "800",
+    },
+    secondaryButton: {
+        minWidth: 84,
+        height: 40,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 1,
+        borderColor: "#30363D",
+    },
+    secondaryButtonText: {
+        color: "#E6EDF3",
+        fontSize: 14,
+        fontWeight: "700",
+    },
+    deletedHint: {
+        color: "#8B949E",
+        fontSize: 12,
+        marginTop: 10,
+    },
+    list: {
+        gap: 10,
+    },
+    item: {
+        backgroundColor: "#161B22",
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: "#30363D",
+        padding: 14,
+    },
+    itemSelected: {
+        borderColor: "#FC6C85",
+    },
+    itemDeleted: {
+        opacity: 0.62,
+    },
+    itemContent: {
+        marginBottom: 12,
+    },
+    itemTitle: {
+        color: "#E6EDF3",
+        fontSize: 16,
+        fontWeight: "800",
+    },
+    itemDescription: {
+        color: "#8B949E",
+        fontSize: 14,
+        marginTop: 4,
+        lineHeight: 19,
+    },
+    itemMeta: {
+        color: "#6E7681",
+        fontSize: 12,
+        marginTop: 8,
+    },
+    itemActions: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
+    },
+    softDeleteButton: {
+        minHeight: 34,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal: 12,
+        backgroundColor: "#21262D",
+    },
+    softDeleteText: {
+        color: "#E6EDF3",
+        fontSize: 12,
+        fontWeight: "800",
+    },
+    hardDeleteButton: {
+        minHeight: 34,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal: 12,
+        backgroundColor: "#4A171E",
+        borderWidth: 1,
+        borderColor: "#FC6C85",
+    },
+    hardDeleteText: {
+        color: "#FC6C85",
+        fontSize: 12,
+        fontWeight: "800",
+    },
+    pressed: {
+        opacity: 0.68,
+    },
+});

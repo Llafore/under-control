@@ -5,17 +5,20 @@ const GREEN = "#39D353";
 export const createChecklistStyle = () => {
     return StyleSheet.create({
         container: {
-            padding: 20,
+            width: "100%",
+            paddingHorizontal: 20,
+            paddingTop: 12,
+            paddingBottom: 28,
         },
         header: {
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "flex-end",
             marginBottom: 12,
         },
         title: {
-            fontSize: 18,
-            fontWeight: "700",
+            fontSize: 22,
+            fontWeight: "800",
             color: "#eee",
         },
         counter: {
@@ -36,8 +39,17 @@ export const createChecklistStyle = () => {
             backgroundColor: GREEN,
         },
         list: {
-            borderRadius: 10,
+            backgroundColor: "#161B22",
+            borderRadius: 8,
             overflow: "hidden",
+            borderWidth: 1,
+            borderColor: "#30363D",
+        },
+        emptyText: {
+            color: "#8B949E",
+            fontSize: 14,
+            paddingVertical: 18,
+            paddingHorizontal: 14,
         },
     });
 };

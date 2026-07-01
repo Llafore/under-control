@@ -1,57 +1,43 @@
-import { useState } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { HabitItem } from "./item";
 import { createChecklistStyle } from "./styles";
-import { getInitialState, getTodayKey } from "./utils";
+import { getFullDateLabel } from "../calendar/utils";
 
-const HABITS = [
-    { id: "1", label: "Beber 2L de água" },
-    { id: "2", label: "30min de exercício" },
-    { id: "3", label: "Ler 20 páginas" },
-    { id: "4", label: "Meditar" },
-    { id: "5", label: "Dormir antes da meia-noite" },
-];
-
-export const HabitChecklist = () => {
-    const todayKey = getTodayKey();
-    const [checked, setChecked] = useState(() => getInitialState(todayKey));
-
-    const toggle = (id) => {
-        setChecked((prev) => ({
-            ...prev,
-            [id]: !prev[id],
-        }));
-    };
-
-    const doneCount = Object.values(checked).filter(Boolean).length;
+export const HabitChecklist = ({ habits, selectedDate, checked, onToggle }) => {
+    const doneCount = habits.filter((habit) => checked[habit.id]).length;
+    const progress = habits.length ? (doneCount / habits.length) * 100 : 0;
     const style = createChecklistStyle();
 
     return (
-        <ScrollView contentContainerStyle={style.container}>
+        <View style={style.container}>
             <View style={style.header}>
-                <Text style={style.title}>Hábitos de hoje</Text>
-                <Text style={style.counter}>{doneCount}/{HABITS.length}</Text>
+                <View>
+                    <Text style={style.title}>{getFullDateLabel(selectedDate)}</Text>
+                </View>
+                <Text style={style.counter}>{doneCount}/{habits.length}</Text>
             </View>
 
             <View style={style.progressBarTrack}>
                 <View
                     style={[
                         style.progressBarFill,
-                        { width: `${(doneCount / HABITS.length) * 100}%` },
+                        { width: `${progress}%` },
                     ]}
                 />
             </View>
 
             <View style={style.list}>
-                {HABITS.map((habit) => (
+                {habits.length ? habits.map((habit) => (
                     <HabitItem
                         key={habit.id}
                         label={habit.label}
                         done={!!checked[habit.id]}
-                        onToggle={() => toggle(habit.id)}
+                        onToggle={() => onToggle(habit.id)}
                     />
-                ))}
+                )) : (
+                    <Text style={style.emptyText}>Nenhum hábito ativo nesta data.</Text>
+                )}
             </View>
-        </ScrollView>
+        </View>
     );
 };
